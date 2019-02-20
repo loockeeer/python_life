@@ -25,9 +25,9 @@ class Personne:
     def get_all_abilities(self):
         return [abilities for abilities in self.abilities]
     
-    def add_lvl_abilities(self, name):
+    def add_lvl_abilities(self, name, value = 1):
         if name in self.abilities:
-            self.abilities[name] += 1
+            self.abilities[name] += value
     
     def awake(self):
         return not self.sleep
