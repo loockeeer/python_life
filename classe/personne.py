@@ -11,6 +11,18 @@ class Personne:
     def get_age(self):
         return self.age
 
-    def add_abilities(self):
-        pass
+    def add_abilities(self, abilities):
+        if abilities not in self.abilities:
+            self.abilities[abilities] = 0
+    
+    def get_lvl_abilities(self, name):
+        if name in self.abilities:
+            return self.abilities[name]
+    
+    def get_all_abilities(self):
+        return [abilities for abilities in self.abilities]
+    
+    def add_lvl_abilities(self, name):
+        if name in self.abilities:
+            self.abilities[name] += 1
     
