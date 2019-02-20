@@ -21,5 +21,8 @@ class Personne:
     
     def get_all_abilities(self):
         return [abilities for abilities in self.abilities]
-
+    
+    def add_lvl_abilities(self, name):
+        if name in self.abilities:
+            self.abilities[name] += 1
     
