@@ -5,6 +5,8 @@ class Personne:
         self.age = age
         self.abilities = {}
         self.sleep = False
+        self.active = False
+        self.location = "Home"
     
     def get_name(self):
         return self.name
@@ -30,3 +32,8 @@ class Personne:
     def awake(self):
         return not self.sleep
     
+    def is_active(self):
+        return self.active
+    
+    def go_somewhere(self, position):
+        self.location = position.capitalize()
