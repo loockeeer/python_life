@@ -4,6 +4,7 @@ class Personne:
         self.name = userName
         self.age = age
         self.abilities = {}
+        self.sleep = False
     
     def get_name(self):
         return self.name
@@ -25,4 +26,7 @@ class Personne:
     def add_lvl_abilities(self, name):
         if name in self.abilities:
             self.abilities[name] += 1
+    
+    def awake(self):
+        return not self.sleep
     
