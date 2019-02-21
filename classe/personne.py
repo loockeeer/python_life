@@ -1,5 +1,5 @@
 class Personne:
-    #Defines a person
+    #Defines a person properly
     def __init__(self, userName, age):
         self.name = userName
         self.age = age
