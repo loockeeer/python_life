@@ -1,23 +1,25 @@
 from time import sleep
+
 class Cake:
-    def __init__(name="undefined", ingredients=dict(), temps_cuisson=int(), unit=str()):
-        self.ingredients=ingredients
-        self.temps_cuisson=temps_cuisson
-        self.unit=unit
-        self.state="not cooked"
-        if unit=="s":
-            pass
-        if unit=="m":
-            temps_cuisson=temps_cuisson/60
-        if unit=="h":
-            temps_cuisson=temps_cuisson/60
-            temps_cuisson=temps_cuisson/60
+
+    def __init__(self, ingredients: dict, cooking_time: int, name="undefined"):
+        self.name = name
+        self.ingredients = ingredients
+        self.cooking_time = cooking_time
+        self.state = "not cooked"
+
     def get_state(self):
-        return state
+        return self.state
+    
+    def get_ingredient(self):
+        return [(ingredient, quantity) for ingredient, quantity in self.ingredients.items()]
+
     def __str__(self):
         return self.name
-    def __list__(self):
-        return self.ingredients
+
     def cook(self):
-        sleep(self.temps_cuisson)
+        sleep(self.cooking_time)
         self.state="cooked"
+
+cake = Cake({"oeuf": 2, "lait": 5}, 30, "cookie")
+print(cake.get_ingredient())
