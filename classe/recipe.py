@@ -16,9 +16,8 @@ class Recipe:
     def add_recipes(self, recipe_name: str, ingredient: list):
         if recipe_name not in self.recipes:
             self.recipes[recipe_name] = ingredient
-        
-        with open("data//recette.txt", "a") as book:
-            book.write(recipe_name)
-            for element in ingredient:
-                book.write(" " + ":".join(element))
-            book.write("\n")
+            with open("data//recette.txt", "a") as book:
+                book.write(recipe_name)
+                for element in ingredient:
+                    book.write(" " + ":".join(element))
+                book.write("\n")
