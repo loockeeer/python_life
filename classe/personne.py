@@ -9,7 +9,12 @@ class Personne:
         self.location = "Home"
 
     #Getters
-
+    def __int__(self):
+        return self.get_age
+    def __str__(self):
+        return self.get_name
+    def __repr__(self):
+        return f"{self.get_name} (Age:{self.get_age}, Abilities:[{', '.join(self.get_all_abilities)}])"
     def get_name(self):
         return self.name
 
