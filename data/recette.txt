@@ -1,0 +1,3 @@
+gateau chocolat:6 lait:2
+miel honey:6 milk:5
+cake milk:6 chocolat:5
