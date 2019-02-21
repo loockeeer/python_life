@@ -21,5 +21,3 @@ class Cake:
         sleep(self.cooking_time)
         self.state="cooked"
 
-cake = Cake({"oeuf": 2, "lait": 5}, 30, "cookie")
-print(cake.get_ingredient())
