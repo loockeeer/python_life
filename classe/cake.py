@@ -1,3 +1,4 @@
+
 from time import sleep
 
 class Cake:
@@ -20,4 +21,3 @@ class Cake:
     def cook(self):
         sleep(self.cooking_time)
         self.state="cooked"
-
