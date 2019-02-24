@@ -1,4 +1,5 @@
-class Personne:
+from entity import Entity
+class Personne(Entity):
     #Defines a person properly
     def __init__(self, userName, age):
         self.name = userName
@@ -7,6 +8,8 @@ class Personne:
         self.sleep = False
         self.active = False
         self.location = "Home"
+        self.male= True if "XY" in self.genetic_code and not "XX" in self.genetic_code else False
+        self.female= True if "XX" in self.genetic_code and not "XY" in genetic_code else False
 
     # Getters
 
@@ -31,6 +34,9 @@ class Personne:
 
     def get_all_abilities(self):
         return [abilities for abilities in self.abilities]
+
+    def get_kind(self):
+        return "Male" if self.male==True else "Female"
 
     # Setters
 
